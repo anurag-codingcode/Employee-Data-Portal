@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signUp{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    background-color: rgb(241, 241, 241);
+    padding: 100px;
+    border-radius: 8px;
+}
+.formField{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:100px
+}
+label{
+    padding-bottom: 22px;
+    flex:1
+}
+
+

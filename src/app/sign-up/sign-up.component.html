@@ -1,0 +1,31 @@
+<body>
+    <div class="signUp">
+        <div class="formField">
+            <label for="">Enter email</label>
+            <mat-form-field appearance="outline" color="primary" class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" placeholder="">
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Enter valid email
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is required
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="formField">
+            <label for="">Enter password</label>
+            <mat-form-field appearance="outline" color="primary" class="example-full-width no-hint">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput [formControl]="passwordFormControl" [errorStateMatcher]="matcher" placeholder="">
+                <mat-error *ngIf="passwordFormControl.hasError('required')">
+                    Password is required
+                </mat-error>
+                <mat-error *ngIf="passwordFormControl.hasError('minlength')">
+                    Password should be at least 8 characters long
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <button mat-flat-button (click)="handleSubmit()" type="submit">Submit</button>
+    </div>
+</body>
