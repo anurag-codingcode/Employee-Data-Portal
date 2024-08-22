@@ -31,23 +31,29 @@
                 <mat-error *ngIf="mobileFormControl.hasError('required')">
                     Mobile is required
                 </mat-error>
+                <mat-error *ngIf="mobileFormControl.hasError('min') || mobileFormControl.hasError('max')">
+                    Mobile number should be 10 digits 
+                </mat-error>
             </mat-form-field>
         </div>
         <div class="formField select">
+            <mat-form-field appearance="outline" color="primary" class="example-full-width no-hint" style="width: 100%;">
             <mat-label>Department</mat-label>
-            <mat-select>
+            <mat-select [formControl]="departmentFormControl">
                 <mat-option value="it">IT</mat-option>
                 <mat-option value="sales">Sales</mat-option>
 
             </mat-select>
+        </mat-form-field>
         </div>
         <div class="formField select">
+            <mat-form-field appearance="outline" color="primary" class="example-full-width no-hint" style="width: 100%;">
             <mat-label>Role</mat-label>
-            <mat-select>
+            <mat-select [formControl]="roleFormControl">
                 <mat-option value="user">User</mat-option>
                 <mat-option value="admin">Admin</mat-option>
-
             </mat-select>
+            </mat-form-field>
         </div>
 
         <button mat-flat-button (click)="handleSubmit()" type="submit">Submit</button>

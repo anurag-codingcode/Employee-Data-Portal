@@ -26,7 +26,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 export class SignUpComponent {
   
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-  passwordFormControl = new FormControl('', [Validators.required, Validators.min(8)]);  
+  passwordFormControl = new FormControl('', [Validators.required, Validators.minLength(8)]);  
   matcher = new MyErrorStateMatcher();
   
   constructor(private router:Router){
@@ -34,6 +34,17 @@ export class SignUpComponent {
   }
 
   handleSubmit(){
-    this.router.navigate(['/basicinfo'])
+    if(!(this.emailFormControl.hasError('required') || this.emailFormControl.hasError('required')
+    || this.passwordFormControl.hasError('required') || this.passwordFormControl.hasError('min'))){
+      const data:any={
+        id:this.emailFormControl.value,
+        password:this.passwordFormControl.value
+      }
+      
+      localStorage.setItem("data",JSON.stringify(data))
+      this.router.navigate(['/basicinfo'])
+  }
+    
+    
   }
 }

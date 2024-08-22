@@ -1,7 +1,15 @@
+
 <body>
-    <div *ngFor="let i of data">
-        <app-details-card></app-details-card>
+    <div class="searchBar">
+        
+        <input class="searchinput" placeholder="search" type="text" id="search" (keyup)="onSearch()" [(ngModel)]="searchQuery" />
     </div>
+
+    <div class="main">
+    <div *ngFor="let note of data">
+        <app-details-card [data]="note" [isAdmin]="admin" ></app-details-card>
+    </div>
+</div>
     
     
 </body>

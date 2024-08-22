@@ -1,0 +1,95 @@
+{
+    "employee": [
+      {
+        "id": "alice.johnson@example.com",
+        "name": "Alice Johnson",
+        "age": 28,
+        "mobile": "1234567890",
+        "department": "it",
+        "role": "admin",
+        "password": "password123"
+      },
+      {
+        "id": "bob.smith@example.com",
+        "name": "Bob Smith",
+        "age": 34,
+        "mobile": "2345678901",
+        "department": "sales",
+        "role": "user",
+        "password": "securePass456"
+      },
+      {
+        "id": "charlie.brown@example.com",
+        "name": "Charlie Brown",
+        "age": 25,
+        "mobile": "3456789012",
+        "department": "it",
+        "role": "user",
+        "password": "charlie789"
+      },
+      {
+        "id": "diana.prince@example.com",
+        "name": "Diana Prince",
+        "age": 30,
+        "mobile": "4567890123",
+        "department": "sales",
+        "role": "admin",
+        "password": "wonderWoman"
+      },
+      {
+        "id": "ethan.hunt@example.com",
+        "name": "Ethan Hunt",
+        "age": 40,
+        "mobile": "5678901234",
+        "department": "it",
+        "role": "user",
+        "password": "mission123"
+      },
+      {
+        "id": "frank.castle@example.com",
+        "name": "Frank Castle",
+        "age": 38,
+        "mobile": "6789012345",
+        "department": "sales",
+        "role": "user",
+        "password": "punisher456"
+      },
+      {
+        "id": "grace.hopper@example.com",
+        "name": "Grace Hopper",
+        "age": 32,
+        "mobile": "7890123456",
+        "department": "it",
+        "role": "admin",
+        "password": "grace789"
+      },
+      {
+        "id": "harry.potter@example.com",
+        "name": "Harry Potter",
+        "age": 29,
+        "mobile": "8901234567",
+        "department": "sales",
+        "role": "user",
+        "password": "hogwarts123"
+      },
+      {
+        "id": "irene.adler@example.com",
+        "name": "Irene Adler",
+        "age": 35,
+        "mobile": "9012345678",
+        "department": "it",
+        "role": "user",
+        "password": "sherlock456"
+      },
+      {
+        "id": "jack.ryan@example.com",
+        "name": "Jack Ryan",
+        "age": 42,
+        "mobile": "0123456789",
+        "department": "sales",
+        "role": "admin",
+        "password": "jackRyan789"
+      }
+    ]
+  }
+  

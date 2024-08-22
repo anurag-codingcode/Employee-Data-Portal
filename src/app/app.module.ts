@@ -15,6 +15,7 @@ import { BasicInfoComponent } from './basic-info/basic-info.component';
 import {MatSelectModule} from '@angular/material/select';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DetailsCardComponent } from './details-card/details-card.component';
+import {  HttpClientModule } from '@angular/common/http';
 
 
 
@@ -34,11 +35,13 @@ import { DetailsCardComponent } from './details-card/details-card.component';
     // material UI
     MatFormFieldModule,
     MatSelectModule,
+    MatInputModule,
 
     //
     ReactiveFormsModule,
     FormsModule,
-    MatInputModule
+    HttpClientModule
+   
 
 
   ],

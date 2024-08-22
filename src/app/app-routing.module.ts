@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { BasicInfoComponent } from './basic-info/basic-info.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { authGuardGuard } from './Auth/auth-guard.guard';
 
 const routes: Routes = [{
   path:'',
@@ -12,7 +13,8 @@ const routes: Routes = [{
   component:BasicInfoComponent
 },{
   path:'dashboard',
-  component:DashboardComponent
+  component:DashboardComponent,
+  canActivate:[authGuardGuard]
 }];
 
 @NgModule({
