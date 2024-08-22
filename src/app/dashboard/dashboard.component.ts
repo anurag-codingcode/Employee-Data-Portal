@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../service/http.service';
+import { SearchPipe } from '../pipe/search.pipe';
+import { FilterPipe } from '../pipe/filter.pipe';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,7 +15,7 @@ export class DashboardComponent implements OnInit{
   admin=false
   user:any
 
-  constructor(private http:HttpService){}
+  constructor(private http:HttpService,private search:SearchPipe,private filterData:FilterPipe){}
   ngOnInit(): void {
     const storedData = localStorage.getItem('data')
     this.user= storedData ? JSON.parse(storedData) : {}
@@ -26,7 +28,8 @@ export class DashboardComponent implements OnInit{
         if(this.admin){
           this.data=this.allData
         }else{
-          this.data=this.allData.filter((user:any)=>user.department==this.user.department)
+          this.data=this.filterData.transform(this.allData,this.user.department)
+          
           this.allData=this.data
           
         }
@@ -39,6 +42,21 @@ export class DashboardComponent implements OnInit{
     
 
   }
-  onSearch(){}
+  onSearch(){
+    // console.log(this.searchQuery)
+    this.data=this.search.transform(this.allData,this.searchQuery) 
+  }
+  onDelete(id:any){
+    this.http.delete(id).subscribe({
+      next:(res)=>{
+        console.log(res)
+        this.ngOnInit()
+      },
+      error:(err)=>{
+        console.log(err)
+      }
+    })
+
+  }
 
 }

@@ -7,7 +7,7 @@
 
     <div class="main">
     <div *ngFor="let note of data">
-        <app-details-card [data]="note" [isAdmin]="admin" ></app-details-card>
+        <app-details-card [data]="note" [isAdmin]="admin" (sendToParent)="onDelete($event)" ></app-details-card>
     </div>
 </div>
     

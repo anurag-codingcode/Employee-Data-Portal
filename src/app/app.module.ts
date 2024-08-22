@@ -16,6 +16,9 @@ import {MatSelectModule} from '@angular/material/select';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DetailsCardComponent } from './details-card/details-card.component';
 import {  HttpClientModule } from '@angular/common/http';
+import { SearchPipe } from './pipe/search.pipe';
+import { FilterPipe } from './pipe/filter.pipe';
+import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -26,7 +29,8 @@ import {  HttpClientModule } from '@angular/common/http';
     SignUpComponent,
     BasicInfoComponent,
     DashboardComponent,
-    DetailsCardComponent
+    DetailsCardComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -36,6 +40,7 @@ import {  HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
+    MatButtonModule,
 
     //
     ReactiveFormsModule,
@@ -45,7 +50,7 @@ import {  HttpClientModule } from '@angular/common/http';
 
 
   ],
-  providers: [],
+  providers: [SearchPipe,FilterPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

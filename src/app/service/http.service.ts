@@ -10,4 +10,7 @@ export class HttpService {
   getUsers(){
     return this.http.get('http://localhost:3000/employee')
   }
+  delete(id:any){
+    return this.http.delete(`http://localhost:3000/employee/${id}`)
+  }
 }

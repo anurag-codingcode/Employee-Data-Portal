@@ -2,12 +2,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(241, 241, 241);
 }
 .signUp{
     display: flex;
     flex-direction: column;
     gap:50px;
-    background-color: rgb(241, 241, 241);
+    background-color: white;
     padding: 100px;
     border-radius: 8px;
 }

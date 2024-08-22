@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-details-card',
@@ -8,11 +8,13 @@ import { Component, Input } from '@angular/core';
 export class DetailsCardComponent {
   @Input() data:any
   @Input() isAdmin:any
+  @Output() sendToParent=new EventEmitter()
   constructor(){
     
   }
   handleDelte(id:any){
-    console.log(id)
+    this.sendToParent.emit(id)
 
   }
+
 }
