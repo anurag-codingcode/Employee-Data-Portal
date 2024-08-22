@@ -1,5 +1,11 @@
 
 <body>
+    <div class="header">
+        <div class="title"><h1>Hello {{user.name}}</h1></div>
+        <div class="logout">
+            <button class="logoutButton" mat-flat-button (click)="handleLogout()">Logout</button>
+        </div>
+    </div>
     <div class="searchBar">
         
         <input class="searchinput" placeholder="search" type="text" id="search" (keyup)="onSearch()" [(ngModel)]="searchQuery" />

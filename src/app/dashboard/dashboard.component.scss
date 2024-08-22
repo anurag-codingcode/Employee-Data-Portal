@@ -4,6 +4,24 @@ body{
     flex-direction: column;
     align-items: center;
 }
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;  
+}
+.logoutButton:hover{
+    background-color: rgb(225, 225, 225);
+
+}
+.title{
+    margin-left: 70px;
+}
+.logout{
+    margin-right: 70px;
+}
 .main{
     background-color: rgb(241, 241, 241);
     display: flex;

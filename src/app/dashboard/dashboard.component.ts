@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../service/http.service';
 import { SearchPipe } from '../pipe/search.pipe';
 import { FilterPipe } from '../pipe/filter.pipe';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,11 +15,11 @@ export class DashboardComponent implements OnInit{
   searchQuery=""
   admin=false
   user:any
-
-  constructor(private http:HttpService,private search:SearchPipe,private filterData:FilterPipe){}
+  constructor(private http:HttpService,private search:SearchPipe,private filterData:FilterPipe,private router:Router){}
   ngOnInit(): void {
     const storedData = localStorage.getItem('data')
     this.user= storedData ? JSON.parse(storedData) : {}
+
     if(this.user.role=='admin'){
       this.admin=true
     }
@@ -57,6 +58,10 @@ export class DashboardComponent implements OnInit{
       }
     })
 
+  }
+  handleLogout(){
+    localStorage.removeItem('data')
+    this.router.navigate([''])
   }
 
 }
