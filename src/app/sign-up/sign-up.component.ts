@@ -34,16 +34,17 @@ export class SignUpComponent {
   }
 
   handleSubmit(){
-    if(!(this.emailFormControl.hasError('required') || this.emailFormControl.hasError('required')
-    || this.passwordFormControl.hasError('required') || this.passwordFormControl.hasError('min'))){
+    if(this.emailFormControl.errors==null && this.passwordFormControl.errors==null){
       const data:any={
         id:this.emailFormControl.value,
         password:this.passwordFormControl.value
       }
-      
       localStorage.setItem("data",JSON.stringify(data))
       this.router.navigate(['/basicinfo'])
-  }
+    }
+    else{
+      alert("Enter all Fields")
+    }
     
     
   }

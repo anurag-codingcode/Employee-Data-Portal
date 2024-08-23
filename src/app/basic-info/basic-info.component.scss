@@ -8,7 +8,7 @@ body{
     display: flex;
     flex-direction: column;
     background-color: white;
-    padding: 50px;
+    padding: 3%;
     justify-content: start;
     border-radius: 8px;
 }
@@ -28,4 +28,13 @@ label{
     margin-bottom: 10px;
 }
 
+@media only screen and (max-width: 600px) {
+    .formField{
+        flex-direction: column;
+        gap:0px;
+        // justify-content: start;
+        align-items: start;
+    }
+    
+  }
 

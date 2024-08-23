@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(241, 241, 241);
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,17 +13,21 @@ body{
     margin-top: 20px;  
 }
 .logoutButton:hover{
-    background-color: rgb(225, 225, 225);
+    background: linear-gradient(135deg, #ff3d3d, #ff6a6a);
 
+}
+.logoutButton{
+    background: linear-gradient(135deg, #ff6a6a, #ff3d3d); 
 }
 .title{
     margin-left: 70px;
 }
 .logout{
     margin-right: 70px;
+   
 }
 .main{
-    background-color: rgb(241, 241, 241);
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
     display: flex;
     flex-wrap: wrap;
     gap: 50px;

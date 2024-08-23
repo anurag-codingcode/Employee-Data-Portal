@@ -3,14 +3,16 @@ body{
     justify-content: center;
     align-items: center;
     background-color: rgb(241, 241, 241);
+  
 }
 .signUp{
     display: flex;
     flex-direction: column;
     gap:50px;
     background-color: white;
-    padding: 100px;
+    padding: 8%;
     border-radius: 8px;
+    // justify-content: center;
 }
 .formField{
     display: flex;
@@ -23,4 +25,13 @@ label{
     flex:1
 }
 
+@media only screen and (max-width: 600px) {
+    .formField{
+        flex-direction: column;
+        gap:0px;
+        // justify-content: start;
+        align-items: start;
+    }
+    
+  }
 

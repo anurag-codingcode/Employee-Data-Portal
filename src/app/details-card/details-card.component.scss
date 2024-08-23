@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     background-color: white;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
     max-width: fit-content;
     padding: 10px;
     border-radius: 8px;
@@ -17,6 +18,15 @@
     flex: 1;
     padding: 10px 5px;
 }
-button{
+button {
     width: 100%;
+    background: linear-gradient(135deg, #ff6a6a, #ff3d3d); 
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background: linear-gradient(135deg, #ff3d3d, #ff6a6a); 
 }

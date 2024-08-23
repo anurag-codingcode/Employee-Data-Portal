@@ -19,24 +19,6 @@
       "password": "punisher456"
     },
     {
-      "id": "irene.adler@example.com",
-      "name": "Irene Adler",
-      "age": 35,
-      "mobile": "9012345678",
-      "department": "it",
-      "role": "user",
-      "password": "sherlock456"
-    },
-    {
-      "id": "bruce.wayne@example.com",
-      "name": "Bruce Wayne",
-      "age": 40,
-      "mobile": "1234567890",
-      "department": "it",
-      "role": "admin",
-      "password": "batman123"
-    },
-    {
       "id": "clark.kent@example.com",
       "name": "Clark Kent",
       "age": 35,

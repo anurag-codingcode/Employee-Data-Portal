@@ -10,7 +10,8 @@ const routes: Routes = [{
   component:SignUpComponent
 },{
   path:'basicinfo',
-  component:BasicInfoComponent
+  component:BasicInfoComponent,
+  canActivate:[authGuardGuard]
 },{
   path:'dashboard',
   component:DashboardComponent,
